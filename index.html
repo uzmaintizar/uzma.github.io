@@ -3,68 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uzma Intizar - CV</title>
-
+<title>My Mobile Website</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f6f9;
-    color: #333;
+body{
+font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+background:#f5f5f5;
 }
-
-header {
-    background: #2c3e50;
-    color: white;
-    padding: 40px;
-    text-align: center;
+header{
+background:#2c3e50;
+color:white;
+padding:20px;
+text-align:center;
 }
-
-section {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+.container{
+padding:20px;
 }
-
-h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+.card{
+background:white;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
-
-ul {
-    line-height: 1.8;
+button{
+background:#3498db;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:5px;
 }
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    color: #777;
+@media(max-width:600px){
+header{font-size:18px;}
 }
 </style>
-
 </head>
 <body>
 
 <header>
-    <h1>Uzma Intizar</h1>
-    <p>Student | Mathematics Graduate | Educator</p>
+<h1>Welcome</h1>
+<p>This is a simple mobile-friendly website</p>
 </header>
 
-<section>
-    <h2>Personal Information</h2>
-    <ul>
-        <li><b>Name:</b> Uzma Intizar</li>
-        <li><b>Phone:</b> 03027802210</li>
-        <li><b>Email:</b> raohassan7802210@gmail.com</li>
-        <li><b>Location:</b> Multan, Pakistan</li>
-        <li><b>Date of Birth:</b> 09-07-2000</li>
-        <li><b>Gender:</b> Female</li>
-    </ul>
-</section>
+<div class="container">
 
-<secti am a dedicated mathematics graduate with strong academic backgr
+<div class="card">
+<h2>About Me</h2>
+<p>I am learning web development and this is my first responsive website.</p>
+</div>
+
+<div class="card">
+<h2>Services</h2>
+<p>Basic website design, CV website, and portfolio creation.</p>
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+<p>Email: example@gmail.com</p>
+<button>Contact Me</button>
+</div>
+
+</div>
+
+</body>
+</html>
