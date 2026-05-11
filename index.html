@@ -1,70 +1,86 @@
+# Portfolio Website Files
+
+## index.html
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Mobile Website</title>
-<style>
-body{
-font-family: Arial, sans-serif;
-margin:0;
-padding:0;
-background:#f5f5f5;
-}
-header{
-background:#2c3e50;
-color:white;
-padding:20px;
-text-align:center;
-}
-.container{
-padding:20px;
-}
-.card{
-background:white;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-button{
-background:#3498db;
-color:white;
-border:none;
-padding:10px 15px;
-border-radius:5px;
-}
-@media(max-width:600px){
-header{font-size:18px;}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uzma Intizar Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <nav>
+      <h2>Uzma Intizar</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <h1>Professional Portfolio</h1>
+      <p>Mathematics Graduate | Excel Skills | Ready to Grow</p>
+      <button onclick="scrollToContact()">Hire Me</button>
+    </section>
+  </header>
 
-<header>
-<h1>Welcome</h1>
-<p>This is a simple mobile-friendly website</p>
-</header>
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>I am Uzma Intizar from Multan. A motivated graduate looking for opportunities to build a successful career.</p>
+  </section>
 
-<div class="container">
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div>Microsoft Excel</div>
+      <div>Communication</div>
+      <div>Computer Basics</div>
+      <div>Time Management</div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>About Me</h2>
-<p>I am learning web development and this is my first responsive website.</p>
-</div>
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Phone: 03027802210</p>
+    <p>Email: raohassan7802210@gmail.com</p>
+    <p>City: Multan</p>
+  </section>
 
-<div class="card">
-<h2>Services</h2>
-<p>Basic website design, CV website, and portfolio creation.</p>
-</div>
-
-<div class="card">
-<h2>Contact</h2>
-<p>Email: example@gmail.com</p>
-<button>Contact Me</button>
-</div>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
+```
+
+## style.css
+
+```css
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f4f6f8;color:#222}
+header{background:linear-gradient(135deg,#111,#444);color:#fff;padding:20px}
+nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+nav ul{display:flex;gap:15px;list-style:none}
+nav a{color:#fff;text-decoration:none}
+.hero{text-align:center;padding:70px 20px}
+.hero h1{font-size:42px;margin-bottom:10px}
+.hero p{margin-bottom:20px}
+button{padding:12px 24px;border:none;border-radius:30px;cursor:pointer}
+.card{max-width:900px;margin:30px auto;background:#fff;padding:30px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-top:15px}
+.grid div{background:#eef2f7;padding:15px;border-radius:12px;text-align:center}
+```
+
+## script.js
+
+```javascript
+function scrollToContact(){
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+}
+
+window.addEventListener('load',()=>{
+  console.log('Portfolio Loaded Successfully');
+});
+```
