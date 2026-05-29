@@ -10,7 +10,7 @@ const text = `I am Uzma Intizar from Multan, Pakistan, a dedicated Mathematics g
 
 I have skills in Microsoft Excel, communication, computer basics, and time management. I enjoy learning new technologies and improving myself every day.
 
-My goal is to build a successful professional career and contribute positively wherever I work.`;
+My goal is to build a successful professional career and contribute positively whenever I work.`;
 
 let index = 0;
 
