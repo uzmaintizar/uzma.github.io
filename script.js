@@ -1,35 +1,22 @@
-```javascript id="k9x2lm"
-function scrollToContact(){
-  document.getElementById("contact").scrollIntoView({
-    behavior:"smooth"
-  });
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-/* Typing Effect */
-const text = `I am Uzma Intizar from Multan, Pakistan, a dedicated Mathematics graduate with a strong passion for learning and personal growth.
+  function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({
+      behavior: "smooth"
+    });
+  }
 
-I have skills in Microsoft Excel, communication, computer basics, and time management. I enjoy learning new technologies and improving myself every day.
+  const text = "I am Uzma Intizar from Multan, Pakistan. A Mathematics graduate passionate about learning, Excel, and technology.";
 
-My goal is to build a successful professional career and contribute positively wherever I work.`;
-
-let index = 0;
-
-function typeEffect(){
   const target = document.getElementById("typing-text");
 
-  if(!target){
-    console.log("typing-text not found");
+  if (!target) {
+    console.log("ERROR: typing-text not found");
     return;
   }
 
-  if(index < text.length){
-    target.innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeEffect, 30);
-  }
-}
+  target.innerHTML = text;
 
-document.addEventListener("DOMContentLoaded", function(){
-  typeEffect();
+  window.scrollToContact = scrollToContact;
+
 });
-```
