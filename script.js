@@ -1,4 +1,4 @@
-```javascript
+```javascript id="k9x2lm"
 function scrollToContact(){
   document.getElementById("contact").scrollIntoView({
     behavior:"smooth"
@@ -10,17 +10,26 @@ const text = `I am Uzma Intizar from Multan, Pakistan, a dedicated Mathematics g
 
 I have skills in Microsoft Excel, communication, computer basics, and time management. I enjoy learning new technologies and improving myself every day.
 
-My goal is to build a successful professional career and contribute positively whenever I work.`;
+My goal is to build a successful professional career and contribute positively wherever I work.`;
 
 let index = 0;
 
 function typeEffect(){
+  const target = document.getElementById("typing-text");
+
+  if(!target){
+    console.log("typing-text not found");
+    return;
+  }
+
   if(index < text.length){
-    document.getElementById("typing-text").innerHTML += text.charAt(index);
+    target.innerHTML += text.charAt(index);
     index++;
     setTimeout(typeEffect, 30);
   }
 }
 
-window.onload = typeEffect;
+document.addEventListener("DOMContentLoaded", function(){
+  typeEffect();
+});
 ```
